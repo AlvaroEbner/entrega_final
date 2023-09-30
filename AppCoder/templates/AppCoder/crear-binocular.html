@@ -1,0 +1,25 @@
+<!-- PLANTILLA PARA FORMULARIOS-->
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+
+
+{% block titulo %}
+<h1 class="text-white fs-3 fw-bolder">Crear Binocular</h1>
+{% endblock %}
+
+
+
+{% block Primera_bajada %} <!--Formulario-->
+<h2>Formulario: Crear Binocular</h2>
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+    {{ form_crear_binocular.as_table }} <!--Cambiar el form-->
+    </table>
+    <input type="submit" value="Guardar">
+</form>
+{% endblock %}
+
+
+
+{% block Segunda_bajada %} <!-- Segunda bajada de información editable-->
+{% endblock %}

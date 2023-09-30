@@ -1,0 +1,27 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="text-white fs-3 fw-bolder">Resultado busqueda de usuario</h1>
+<p class="text-white-50 mb-0"></p>
+{% endblock %}
+
+{% block Primera_bajada %} <!-- Primera bajada de informacion editable -->
+
+    {% if res %}
+        <ol>
+        {% for usuario in res %}
+            <li> Nombre: {{usuario.nombre}} / Edad: {{usuario.edad}} / Correo: {{usuario.correo}} / Dirección: {{usuario.direccion}} </li>
+        {% endfor %}
+        </ol>
+    {% else %}
+        <h3> No hay resultados que coincidan con tu búsqueda </h3>
+    {% endif %}  
+{% endblock %}
+
+
+
+{% block Segunda_bajada %} <!-- Segunda bajada de información editable-->
+{% endblock %}
+

@@ -1,0 +1,59 @@
+Super Usuario:
+nombre: alvaro
+clave: nada1234
+
+- crear formularios con django, 1:42 hrs. video PlayGr intermedio III
+
+- pendiente,
+    a) eliminar conflicto con models. y form. (fechas y booleanos, estan comentados)
+    b) cambiar los link de las imagenes de fondo
+    c) insertar imagenes en models. y form. de los productos (telescopios, monturas, etc)
+    d) probar si al agregar /AppCoder, la barra, no me abre otra pestaña con los botones
+
+    
+DESPUES DEL ENVÍO!
+
++++++++++++++++++++++++++clase 23 Playground avanzado parte II+++++++++++++++++++++++
+
+a) actualizar (video inicio), crear vista para actualizar usuarios
+es parecido a la vista eliminar, se envían dos parametros. 
+
+b) vista basada en clases!!
+
+1.- en views from django.views.generic impor ListView (para ver)
+- en el html indicar el modelo no la clase!
+- importar ListView, CreateView,
+- ListView = solo requiere model
+- CreateView = model, fields (parametros de la clase), success_url (una ruta)
+   form en html (es por defecto el contexto que se envia desde la vista)
+- url llevan .as_view y pk (el id)
+- template_name --> se puede renombrar el template para personalizar el html
+
+- al final de la clase, pagina de inicio salude quien inicie
+- formulario para registrase (ultima parte del video de la clase)
+    -vista con views
+
+++++++++++++++++++++++++Clase 24 (login, edicion usuario, login)+++++++++++++++++++++++++
+
+- login, 
+    - para el proyecto final hacer App (una para login)
+- Logout
+- editar perfil
+- avatar
+    modelo
+    settings agregar 
+    img src = {% static '<direccion>' %} ?
+
+git de la clase: https://github.com/ematevez/Clase-24-747765.git
+
+- python Anywhere (subir página a servidor) video tutorial
+
+-  
++++++++++++++++ after clas +++++++++++++
+
+- decoradores
+- crear app y vincularla
+- videos que se subiran (peliculas), uno de ellos muestra como subir imagenes en los form
+        enctype='multipart/form-data'??
+        
+    

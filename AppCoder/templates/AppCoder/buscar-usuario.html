@@ -1,0 +1,26 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="text-white fs-3 fw-bolder">Buscar Usuario</h1>
+<p class="text-white-50 mb-0">bajada</p>
+{% endblock %}
+
+{% block Primera_bajada %} <!-- Primera bajada de informacion editable -->
+<h2>Formulario: Buscar Usuarios</h2>
+
+<form action="/AppCoder/resultado-usuario/" method="GET">
+    <p> Nombre: <input type="text" name="nombre" >  </p>
+    <input type="submit" value="Buscar" >
+</form>
+
+<p class="lead"></p>
+<p class="mb-0"></p>
+{% endblock %}
+
+{% block Segunda_bajada %} <!-- Segunda bajada de información editable-->
+<h2>segunda bajada de información </h2>
+<p class="lead"> Descripcion 1</p>
+<p class="mb-0">descripcion 2</p>
+{% endblock %}

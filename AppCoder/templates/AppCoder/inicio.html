@@ -1,0 +1,24 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="text-white fs-3 fw-bolder">Página de Inicio</h1>
+<p class="text-white-50 mb-0">bajada</p>
+{% endblock %}
+
+{% block Primera_bajada %} <!-- Primera bajada de informacion editable -->
+<h2>Buscar Usuarios </h2>
+
+    <a href="{% url 'buscar-usuario' %}" target="_blank">
+        <button>Buscar Usuario</button> </a>
+
+<p class="lead"></p>
+<p class="mb-0"></p>
+{% endblock %}
+
+{% block Segunda_bajada %} <!-- Segunda bajada de información editable-->
+<h2>Segunda bajada de informacion</h2>
+<p class="lead"> Descripcion 1</p>
+<p class="mb-0">descripcion 2</p>
+{% endblock %}

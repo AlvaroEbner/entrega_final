@@ -1,0 +1,24 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="text-white fs-3 fw-bolder">Telescopios</h1>
+<p class="text-white-50 mb-0">bajada</p>
+{% endblock %}
+
+{% block Primera_bajada %} <!-- Primera bajada de informacion editable -->
+<h2>primera bajada de información </h2>
+<p class="lead"> Descripcion 1</p>
+<p class="mb-0">descripcion 2</p>
+<a href="{% url 'crear-telescopio' %}" target="_blank">
+    <button>Crear Telescopio</button>
+{% endblock %}
+
+
+
+{% block Segunda_bajada %} <!-- Segunda bajada de información editable-->
+<h2>segunda bajada de información </h2>
+<p class="lead"> Descripcion 1</p>
+<p class="mb-0">descripcion 2</p>
+{% endblock %}
