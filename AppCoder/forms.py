@@ -1,8 +1,18 @@
 from django import forms 
-
-
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 #Formularios
 
+#registro de usuario
+class UserRegisterForm(UserCreationForm):
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
+
+
+#usuario 
 class Usuario_Form(forms.Form):
     nombre = forms.CharField(max_length=60) #str
     edad = forms.IntegerField() #int

@@ -1,0 +1,26 @@
+
+
+<!-- PLANTILLA PARA FORMULARIOS-->
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+
+{% block titulo %}
+<h1 class="text-white fs-3 fw-bolder">Registro de nuevo usuario</h1>
+{% endblock %}
+
+{% block Primera_bajada %} <!--Formulario-->
+<h2>Formulario: Nuevo Usuario</h2>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Registrate!</button>
+</form>
+
+
+{% endblock %}
+
+
+
+{% block Segunda_bajada %} <!-- Segunda bajada de información editable-->
+{% endblock %}

@@ -2,12 +2,56 @@ from django.shortcuts import render
 from AppCoder.models import *
 from AppCoder.forms import  *# importar los formularios 
 
+#login
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, User
+from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.decorators import login_required
+
+def login_request(request):
+
+    if request.method == 'POST':
+        form = AuthenticationForm(request, data = request.POST)
+        if form.is_valid():  # Si pasó la validación de Django
+            usuario = form.cleaned_data.get('username')
+            contrasenia = form.cleaned_data.get('password')
+            user = authenticate(username= usuario, password=contrasenia)
+            if user is not None:
+                login(request, user)
+                return render(request, "AppCoder/inicio.html", {"mensaje":f"Bienvenido {usuario}"})
+            else:
+                return render(request, "AppCoder/inicio.html", {"mensaje":"Datos incorrectos"})
+    
+        else:
+            return render(request, "AppCoder/inicio.html", {"mensaje":"Formulario erroneo"})
+
+    form = AuthenticationForm()
+
+    return render(request, "AppCoder/login.html", {"form": form})
+
+# Vista de registro
+def register(request):
+      if request.method == 'POST':
+            #form = UserCreationForm(request.POST)
+            form = UserRegisterForm(request.POST)
+            if form.is_valid():
+                  username = form.cleaned_data['username']
+                  form.save()
+                  return render(request,"AppCoder/inicio.html" ,  {"mensaje":"Usuario Creado :)"})
+      else:
+            #form = UserCreationForm()       
+            form = UserRegisterForm()     
+      return render(request,"AppCoder/registro.html" ,  {"form":form})
+
+
 # html para ver paginas. 
 
 def inicio(request):
     return render(request,"AppCoder/inicio.html" )
 
+
+
 #para ver a los usuarios de la BD en la pagina de usuarios
+@login_required
 def ver_usuario(request):
 
     todos = Usuario.objects.all() #accedo a los usuarios de la BD
