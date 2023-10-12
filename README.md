@@ -1,4 +1,20 @@
-# Tercera_pre-entrega_Ebner
+# Comunidad de observación astronomica e intercambio de insumos: WENUMAPU (la tierra del cielo)
+
+El proyecto es una pagina web que tiene dos objetivos, el primero es agendar tour de observación astronómica y la otra es ofrecer equipamiento, el que pueden ofrecer los usuarios de la plataforma.
+
+##Descripción de los modelos.
+- Usuario: Para el inicio de sesión, cerrar sesión, editar usuarios.
+
+- Reservar: Tour (nombre, cantidad total de adultos, cantidad total de niños, fecha del tour con despliegue de calendario) éste modelo se aplica para publicar lista de reservas de tour en /tour.
+
+- Modelos vinculados a equipamiento:
+	- Cámara: (tipo y se despliegan opciones, marca, precio, color) este modelo se 
+
+
+
+
+
+Tercera_pre-entrega_Ebner
 
 1. lo primero es correr el servidor, abrir terminal: python3 manage.py runserver
 2. copiar el siguiente url en el navegador: http://127.0.0.1:8000/AppCoder/, y se mostrará la pagina de inicio.
@@ -16,3 +32,13 @@
 - [Uso](#uso)
 - [Contribución](#contribución)
 - [Licencia](#licencia)
+
+- 
+-readme.md
+	- descripción: para que es el proyecto, explicar los crud
+	- nombre del proyecto, objetivos, y los modelos funcionales.
+	- superusuario y contraseña se debe incorporar.
+	- se deben mencionar los modelos.
+	- Pruebas realizadas, link a las pruebas
+	- video demostración (link)
+	- 
