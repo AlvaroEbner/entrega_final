@@ -2,7 +2,7 @@
 
 El proyecto es una pagina llamada wenumapu, que en lengua del pueblo mapuche es “la tierra de arriba”, la que tiene dos objetivos, el primero es agendar tour de observación astronómica o de astro-fotografía, y la otra es ofrecer equipamiento, el que pueden publicar tanto los usuarios como el administrador de la página.
 
-##Descripción de los modelos.
+## Descripción de los modelos.
 - Usuario: Para el inicio de sesión, cerrar sesión, editar usuarios.
 
 - Reservar: Tour (nombre, cantidad total de adultos, cantidad total de niños, fecha del tour con despliegue de calendario) éste modelo se aplica para publicar lista de reservas de tour en /tour.
