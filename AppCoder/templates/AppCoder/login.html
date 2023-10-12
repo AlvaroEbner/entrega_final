@@ -1,0 +1,20 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+{% endblock %}
+
+{% block Primera_bajada %} <!-- Primera bajada de informacion editable -->
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Inciar sesion</button>
+    <a class="btn btn-primary" href= "{% url 'registro'%}" >Regístrate</a>
+</form>
+
+<p class="lead"></p>
+<p class="mb-0"></p>
+{% endblock %}
+

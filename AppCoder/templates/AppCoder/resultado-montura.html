@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block titulo %}
-<h1 class="text-white fs-3 fw-bolder">Resultado busqueda de usuario</h1>
+<h1 class="text-white fs-3 fw-bolder">Resultado busqueda de Montura</h1>
 <p class="text-white-50 mb-0"></p>
 {% endblock %}
 
@@ -11,8 +11,8 @@
 
     {% if res %}
         <ol>
-        {% for usuario in res %}
-            <li> Nombre: {{usuario.nombre}} / Edad: {{usuario.edad}} / Correo: {{usuario.correo}} / Dirección: {{usuario.direccion}} </li>
+        {% for montura in res %}
+            <li>Tipo: {{montura.tipo}} / Goto: {{montura.goto}} / Carga Máxima (Kg.): {{montura.carga_max}} / Marca: {{montura.marca}} / Peso : {{montura.peso}}</li>
         {% endfor %}
         </ol>
         
@@ -25,4 +25,3 @@
 
 {% block Segunda_bajada %} <!-- Segunda bajada de información editable-->
 {% endblock %}
-

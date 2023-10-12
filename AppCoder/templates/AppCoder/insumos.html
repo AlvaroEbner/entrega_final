@@ -1,0 +1,31 @@
+
+
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+
+{% block titulo %}
+
+<h1 class="text-white fs-3 fw-bolder">Intercambio de Insumos</h1>
+<p class="text-white-50 mb-0">Selecciona una de las categorías de equipamiento y verás la lista disponible, o si prefieres puedes poner  a disposición el tuyo, solo debes llenar el formulario con las características. </p>
+{% endblock %}
+
+{% block Primera_bajada %} <!-- Primera bajada de informacion editable -->
+<h2>Insumos para observación</h2>
+<li><a class="btn btn-primary" href= "{% url 'camaras' %}" >Cámaras para astrofotografia </a></li>
+<br>
+<li><a class="btn btn-primary" href= "{% url 'tripodes' %}" >Trípodes</a></li>
+<br>
+<li><a class="btn btn-primary" href= "{% url 'telescopios' %}" >Telescopios</a></li>
+<br>
+<li><a class="btn btn-primary" href= "{% url 'monturas' %}" >Monturas</a></li>
+<br>
+<li><a class="btn btn-primary" href= "{% url 'binoculares' %}" >Binoculares</a></li>
+
+  
+{% endblock %}
+
+{% block Segunda_bajada %} <!-- Segunda bajada de información editable-->
+
+{% endblock %}

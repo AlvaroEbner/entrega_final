@@ -1,5 +1,16 @@
 from django.db import models
 
+
+
+#avatar
+from django.contrib.auth.models import User
+
+class Avatar(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE) # vinculo entre clase avatar y clase user que esta en el registro de formulario
+    imagen = models.ImageField(upload_to='avatares', null=True, blank =True)
+    def __str__(self):
+        return f"{self.user} - {self.imagen}"
+
 #modelos para pagina Astroturismo
 
 class Usuario(models.Model):
@@ -25,7 +36,7 @@ class Tour(models.Model):
     total_adultos = models.IntegerField()
     total_ninios = models.IntegerField()
     #fecha_reserva = models.DateTimeField(auto_now_add =True) #automáticamente la fecha y hora actual cuando se crea el objeto por primera vez y no se actualiza en futuras modificaciones
-    fecha_tour = models.DateField() 
+    fecha_tour = models.DateField()
     #opciones = [( 'observación','Observación'),('astrofotografia','Astrofotografía')]
     #tipo_tour = models.CharField (max_length= 15, choices=opciones) #despliege opcion (observación o astrofoto) /Cada tupla contiene dos elementos: el valor que se enviará al servidor cuando se seleccione esa opción y la etiqueta que se mostrará al usuario.
 
@@ -54,6 +65,7 @@ class Telescopio(models.Model):
 class Montura(models.Model):
     opciones_1 = [( 'azimutal','Azimutal'), ( 'ecuatorial','Ecuatorial')]
     opciones_2 =[( 'goto','GoTo'), ( 'manual','Manual')]
+    
     tipo = models.CharField  (max_length= 15 , choices= opciones_1)  #azimutal, ecuatorial
     goto = models.CharField  (max_length= 15 , choices= opciones_2) 
     carga_max = models.IntegerField()

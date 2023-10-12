@@ -1,0 +1,38 @@
+
+<!-- PLANTILLA PARA FORMULARIOS-->
+{% extends "AppCoder/padre.html" %}
+{% load static %}
+
+
+{% block titulo %}
+<h1 class="text-white fs-3 fw-bolder">Crear Cámara</h1>
+{% endblock %}
+
+
+
+{% block Primera_bajada %} <!--Formulario-->
+
+<h1>Formulario - Editar Perfil</h1>
+<h1>De {{usuario}}</h1>
+
+
+<form action="" method="POST"> {% csrf_token %}
+
+    <!-- Acá está la magia de Django-->
+    
+    <table>
+
+        {{ miFormulario.as_table }}
+
+    </table>
+
+    <input type="submit", value="Enviar">
+
+</form>  
+
+{% endblock %}
+
+
+
+{% block Segunda_bajada %} <!-- Segunda bajada de información editable-->
+{% endblock %}

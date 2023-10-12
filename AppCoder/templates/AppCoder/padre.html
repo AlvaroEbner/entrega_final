@@ -18,24 +18,38 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="{% url 'inicio' %}">Inicio</a> <!-- BOTON DE LA DERECHA -->
+                <a class="navbar-brand" href="{% url 'inicio' %}">Inicio</a> <!-- BOTON DE LA DERECHA -->             
+                
+                {% if request.user.is_authenticated %} <!--Se oculta el boton de iniciar sesion la iniciar sesion-->
+                <style>
+                    .text-muted.smmall {
+                      font-size: 24px; /* Elige el tamaño de fuente que desees */
+                    }
+                  </style>
+                <p class="text-muted smmall mb-4 mb-lg-0"> _Bienvenido {{user.username}}_</p>
+                <a class="navbar-brand" href="{% url 'EditarPerfil' %}">Editar Usuario</a> 
+                <a class="navbar-brand" href="{% url 'logout' %}"> Cerrar Sesión</a> 
+                {% endif %}                                             
+
+                {% if not request.user.is_authenticated %} <!--Se oculta el boton de iniciar sesion la iniciar sesion-->
+                <a class="navbar-brand" href="{% url 'login' %}"> Iniciar Sesión</a>
+                {% endif %}     
+
+                                          
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="{% url 'usuarios' %}">Usuarios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'galeria-imagenes' %}">Galeria Imágenes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'tour' %}">Tour Astronómico</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'camaras' %}">Cámaras</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'tripodes' %}">Trípodes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'telescopios' %}">Telescópios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'monturas' %}">Monturas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'binoculares' %}">Binoculares</a></li>
+                        <!--<li class="nav-item"><a class="nav-link" href="{% url 'usuarios' %}">Usuarios</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="{% url 'tour' %}">Tour Observación y Astrofotografía</a></li>
+                        <!--<li class="nav-item"><a class="nav-link" href="{% url 'galeria-imagenes' %}">Galeria Imágenes</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="{% url 'insumos' %}">Equipamiento</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'quien-soy' %}">Quién Soy</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Header - set the background image for the header in the line below-->
-        <header class="py-5 bg-image-full" style="background-image: url('https://unsplash.com/photos/4dpAqfTbvKA/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MzN8fHVuaXZlcnNlfGVzfDB8fHx8MTY5NjEwNTkzNHww&force=true')"> <!-- se debe pegar el link de descarga de unsplash -->
+        <header class="py-5 bg-image-full" style="background-image: url('https://unsplash.com/photos/0rvKw0fDiHk/download?force=true')"> <!-- se debe pegar el link de descarga de unsplash -->
             <div class="text-center my-5">
                 <!--imagen del circulo-->
                 <!-- <img class="img-fluid rounded-circle mb-4" src="https://dummyimage.com/150x150/6c757d/dee2e6.jpg" alt="..." />     IMAGEN DE CIRCULO-->
@@ -65,7 +79,7 @@
             </div>
         </section>
         <!-- Image element - set the background image for the header in the line below-->
-        <div class="py-5 bg-image-full" style="background-image: url('https://unsplash.com/photos/fUnfEz3VLv4/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjR8fHVuaXZlcnNlfGVzfDB8fHx8MTY5NjEwNTkzNHww&force=true')">
+        <div class="py-5 bg-image-full" style="background-image: url('https://unsplash.com/photos/lLExhYl-cXQ/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTl8fGdhbGF4aWF8ZXN8MHwwfHx8MTY5NzAyOTgxMXwy&force=true')">
             <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
             <div style="height: 20rem"></div>
         </div>
