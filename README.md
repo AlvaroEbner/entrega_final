@@ -8,3 +8,11 @@
 6. Al buscar un nombre de usuario que no esta en BD, se muestra: "No hay resultados que coincidan con tu búsqueda"
 7. El proyecto tiene una aplicación AppCoder, el que contiene los archivos específicos.
 8. Al modificar los modelos se debe migrar.
+
+9. ##Subtitulo
+- [Acerca del Proyecto](#acerca-del-proyecto)
+- [Capturas de Pantalla](#capturas-de-pantalla)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
