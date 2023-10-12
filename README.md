@@ -59,4 +59,4 @@ Cabe señalar que cada característica de los modelos está asociado a una entra
 ## Link Video de funcionalidad y navegación por la página.
 - Video en formato mp4 pesa 81,5 mb
 - Link al video publicado en youtube: https://youtu.be/WXtsUhPDNzU
-- Link al video publicado en Drive para descargar: https://drive.google.com/file/d/1SpqfKsQ8nqXPCqd1LkRZPME00dceA8sF/view?usp=sharing 
+- Link al video publicado en Drive para descargar o visualizar: https://drive.google.com/file/d/1SpqfKsQ8nqXPCqd1LkRZPME00dceA8sF/view?usp=sharing 
