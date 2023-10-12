@@ -9,7 +9,7 @@
 7. El proyecto tiene una aplicación AppCoder, el que contiene los archivos específicos.
 8. Al modificar los modelos se debe migrar.
 
-9. ##Subtitulo
+ ## Subtitulo
 - [Acerca del Proyecto](#acerca-del-proyecto)
 - [Capturas de Pantalla](#capturas-de-pantalla)
 - [Instalación](#instalación)
