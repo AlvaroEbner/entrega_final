@@ -53,6 +53,7 @@ Cabe señalar que cada característica de los modelos está asociado a una entra
 - En cada una de las 5 paginas donde se listan los artículos de equipamiento publicados (cámara, trípode, telescopio, montura y binocular), al final hay dos botones, uno para crear publicación y otro para buscar un artículo, al pinchar éste último, se despliega un formulario donde se debe indicar la marca del artículo para posteriormente pinchar el botón buscar, si la búsqueda es exitosa se despliega una lista con los artículos indicados. Si no existen coincidencias aparece el siguiente mensaje: No hay resultados que coincidan con tu búsqueda.
 
 ## Casos de Test
+- Link planilla con registro de casos de test:  https://docs.google.com/spreadsheets/d/1n3ASjNMvhF2Dk-dQE29Lwl9J96n8xAmSy7jDOUIlCfE/edit?usp=sharing 
 
 
 ## Link Video de funcionalidad y navegación por la página.
