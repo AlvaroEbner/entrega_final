@@ -1,18 +1,41 @@
 from django import forms 
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.db import models
 #Formularios
 
 #registro de usuario
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField()
-
+    password1 = forms.CharField(label="Contraseña", widget=forms.PasswordInput)
+    password2 = forms.CharField(label="Repetir contraseña", widget=forms.PasswordInput)
+ 
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
+        # Saca los mensajes de ayuda
+        help_texts = {k:"" for k in fields}
+
+#editar registro de ususario
+class UserEditForm(UserCreationForm):
+
+    # Obligatorios
+    email = forms.EmailField(label="Ingrese su email:")
+    password1 = forms.CharField(label='Contraseña', widget=forms.PasswordInput)
+    password2 = forms.CharField(
+        label='Repetir la contraseña', widget=forms.PasswordInput)
+
+    last_name = forms.CharField()
+    first_name = forms.CharField()
+
+    class Meta:
+        model = User
+        fields = ['email', 'password1', 'password2']
 
 
-#usuario 
+
+
+#usuario ----------------------------------------------------------------------------------
 class Usuario_Form(forms.Form):
     nombre = forms.CharField(max_length=60) #str
     edad = forms.IntegerField() #int
@@ -36,7 +59,7 @@ class Reservar_tour_Fomr(forms.Form):
     total_adultos = forms.IntegerField()
     total_ninios = forms.IntegerField()
     #fecha_reserva = forms.DateTimeField(auto_now_add =True) #automáticamente la fecha y hora actual cuando se crea el objeto por primera vez y no se actualiza en futuras modificaciones
-    fecha_tour = forms.DateField() 
+    fecha_tour = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
     #opciones = [( 'observación','Observación'),('astrofotografia','Astrofotografía')]
     #tipo_tour = forms.CharField (max_length= 15, choices=opciones)
 
@@ -63,7 +86,7 @@ class Telescopio_Form(forms.Form):
 
 class Montura_Form(forms.Form):
     tipo = forms.ChoiceField (choices= [ ( 'azimutal','Azimutal'), ( 'ecuatorial','Ecuatorial')])#azimutal, ecuatorial
-    seguimiento = forms.ChoiceField (choices= [ ( 'goto','GoTo'), ( 'manual','Manual')])
+    goto = forms.ChoiceField (choices= [ ( 'goto','GoTo'), ( 'manual','Manual')])
     carga_max = forms.IntegerField()
     marca = forms.CharField(max_length=60) 
     peso = forms.IntegerField()

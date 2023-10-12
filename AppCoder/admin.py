@@ -11,6 +11,9 @@ admin.site.register(Telescopio)
 admin.site.register(Montura)
 admin.site.register(Binocular)
 
+#hacer visible la imagen del avatar
+admin.site.register(Avatar)
+
 
 
 

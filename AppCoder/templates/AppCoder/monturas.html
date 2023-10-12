@@ -8,11 +8,27 @@
 {% endblock %}
 
 {% block Primera_bajada %} <!-- Primera bajada de informacion editable -->
-<h2>primera bajada de información </h2>
-<p class="lead"> Descripcion 1</p>
-<p class="mb-0">descripcion 2</p>
+<h2>Listado de Monturas Disponibles: </h2>
+<p class="lead"></p>
+<p class="mb-0"></p>
+
+<ol>
+    {% for montura in todas_monturas%}
+        <li>
+            Tipo: {{montura.tipo}} / Goto: {{montura.goto}} / Carga Máxima (Kg.): {{montura.carga_max}} / Marca: {{montura.marca}} / Peso : {{montura.peso}}
+            <a class="btn btn-primary" href= "{% url 'eliminar-montura' montura.marca %}" >Borrar {{montura.marca}} </a>
+        </li>
+       
+    {% endfor %}
+</ol>
+
+
+
+
 <a href="{% url 'crear-montura' %}" target="_self">
-    <button>Crear Montura</button>
+    <button>Crear Publicación Montura</button>
+<a href="{% url 'buscar-montura' %}" target="_self">
+    <button>Buscar Montura</button>
 {% endblock %}
 
 {% block Segunda_bajada %} <!-- Segunda bajada de información editable-->

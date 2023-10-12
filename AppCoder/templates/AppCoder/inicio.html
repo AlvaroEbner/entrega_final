@@ -3,20 +3,26 @@
 {% load static %}
 
 {% block titulo %}
-<h1 class="text-white fs-3 fw-bolder">Página de Inicio</h1>
-<p class="text-white-50 mb-0">bajada</p>
+<h1 class="text-white fs-3 fw-bolder">WenuMapu</h1>
+<p class="text-white-50 mb-0">Comunidad de aficionados a la observacion astronómica y astrofotografia</p>
 {% endblock %}
 
 {% block Primera_bajada %} <!-- Primera bajada de informacion editable -->
-
-
-
-<p class="lead"></p>
-<p class="mb-0"></p>
+<div class="text-center">
+    <img height="40px" src="{{url}}">
+    {% if not request.user.is_authenticated %} 
+    <h3> Por favor, inicia sesion para inscribirte en tour de astrofotografía u orbervación. Tambien para acceder oferta de equipamiento de la comunidad</h3>
+    {% endif %}
+    {% if request.user.is_authenticated %}
+    <h3>Bienvenido {{user.username}}, gracias por registrarte!! </h3>
+    <p class="lead">Ahora puedes acceder para agendar e inscribirte en un tour de astrofotografía o de observación por medio de telescopios</p>
+    <p class="lead">También puedes revisar equipos a la venta disponibles u ofrecer el tuyo para venderlo a otros miembros de la comunidad</p>
+    {% endif %}
+</div>
 {% endblock %}
 
 {% block Segunda_bajada %} <!-- Segunda bajada de información editable-->
-<h2>Segunda bajada de informacion</h2>
-<p class="lead"> Descripcion 1</p>
-<p class="mb-0">descripcion 2</p>
+<h2></h2>
+<p class="lead"></p>
+<p class="mb-0"></p>
 {% endblock %}
